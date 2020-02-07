@@ -4,7 +4,7 @@ class Api::V1::ProjectsController < ApplicationController
         #model
         @projects = Project.all
         #response
-        render json: @projects
+        render json: ProjectSerializer.new(@projects)
     end
 
     # GET /projects/1
